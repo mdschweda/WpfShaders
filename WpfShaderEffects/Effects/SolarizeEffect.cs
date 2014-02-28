@@ -32,7 +32,7 @@ namespace WpfShaderEffects {
         }
 
         /// <summary>
-        /// Threshold for inversion of color channels between 0 and 1.
+        /// Threshold for inversion of color channels between 0 and 1.0
         /// </summary>
         public double Threshold {
             get {

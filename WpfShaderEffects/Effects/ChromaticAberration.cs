@@ -8,23 +8,23 @@ namespace WpfShaderEffects {
     /// <summary>
     /// A shader effect that shifts the channels of a target texture, simulating achromatism 
     /// </summary>
-    public class ChromaticAberration : ShaderEffect {
+    public class ChromaticAberrationEffect : ShaderEffect {
 
         #region Dependency Properties
 
         public static readonly DependencyProperty InputProperty =
-            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(ChromaticAberration), 0);
+            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(ChromaticAberrationEffect), 0);
 
         public static readonly DependencyProperty OffsetRProperty =
-            DependencyProperty.Register("OffsetR", typeof(Point), typeof(ChromaticAberration),
+            DependencyProperty.Register("OffsetR", typeof(Point), typeof(ChromaticAberrationEffect),
                     new UIPropertyMetadata(new Point(0.0, 0.0), PixelShaderConstantCallback(0)));
 
         public static readonly DependencyProperty OffsetGProperty =
-            DependencyProperty.Register("OffsetG", typeof(Point), typeof(ChromaticAberration),
+            DependencyProperty.Register("OffsetG", typeof(Point), typeof(ChromaticAberrationEffect),
                     new UIPropertyMetadata(new Point(1.0, 2.0), PixelShaderConstantCallback(1)));
 
         public static readonly DependencyProperty OffsetBProperty =
-            DependencyProperty.Register("OffsetB", typeof(Point), typeof(ChromaticAberration),
+            DependencyProperty.Register("OffsetB", typeof(Point), typeof(ChromaticAberrationEffect),
                     new UIPropertyMetadata(new Point(4.0, 0.0), PixelShaderConstantCallback(2)));
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace WpfShaderEffects {
 
         #endregion
 
-        public ChromaticAberration() {
+        public ChromaticAberrationEffect() {
             PixelShader = new PixelShader {
                 UriSource = Global.MakePackUri("Shaders/ChromaticAberration.ps")
             };

@@ -71,7 +71,7 @@ namespace WpfShaderEffects {
         }
 
         /// <summary>
-        /// Coefficients for the ITU-R Recommendation BT.601 standard
+        /// Coefficients for the ITU-R Recommendation BT.709 standard
         /// </summary>
         public static Point3D Rec709 {
             get {
