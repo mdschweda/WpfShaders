@@ -1,4 +1,6 @@
-﻿using System;
+﻿// GIT_COMMITTER_DATE
+
+using System;
 using System.Windows;
 using System.Reflection;
 
