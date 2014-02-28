@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:e="clr-namespace:WpfShaderEffects;assembly=WpfShaderEffects"
+        Title="MainWindow" Height="575" Width="800">
+    <Grid>
+        <Grid Name="visualSrc" Background="White">
+            <TextBox Text="Test" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" />
+        </Grid>
+        <Image Source="test2.jpg" IsHitTestVisible="False">
+            <Image.Effect>
+                <e:ChromaticAberration />
+            </Image.Effect>
+        </Image>
+    </Grid>
+</Window>

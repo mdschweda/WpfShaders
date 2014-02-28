@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfShaderEffects", "WpfShaderEffects\WpfShaderEffects.csproj", "{EDB5E8A6-830C-4EA0-B309-C35019ABA183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication", "WpfApplication\WpfApplication.csproj", "{4B0E2016-9F97-444E-B68B-68289A89F751}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDB5E8A6-830C-4EA0-B309-C35019ABA183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB5E8A6-830C-4EA0-B309-C35019ABA183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB5E8A6-830C-4EA0-B309-C35019ABA183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB5E8A6-830C-4EA0-B309-C35019ABA183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B0E2016-9F97-444E-B68B-68289A89F751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B0E2016-9F97-444E-B68B-68289A89F751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B0E2016-9F97-444E-B68B-68289A89F751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B0E2016-9F97-444E-B68B-68289A89F751}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
