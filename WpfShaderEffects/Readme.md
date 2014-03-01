@@ -138,6 +138,15 @@ Provides gamma correction.
 * **Input**: Brush that acts as the input
 * **Gamma**: A positive gamma value
 
+## GaussianBlurEffect
+
+A shader effect that applies a Gaussian blur on a target texture.
+
+### Parameters
+
+* **Input**: Brush that acts as the input
+* **Sigma**: A positive sigma value, affecting the blur strength
+
 ## GrayscaleEffect
 
 Turns a target texture into a grayscale output.
