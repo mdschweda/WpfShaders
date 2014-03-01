@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WpfShaderEffects")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Provides pixel shader effects for WPF")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WpfShaderEffects")]
+[assembly: AssemblyCompany("Marcus Schweda")]
+[assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("Copyright © Marcus Schweda 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

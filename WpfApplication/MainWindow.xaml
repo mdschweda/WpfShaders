@@ -9,7 +9,7 @@
         </Grid>
         <Image Source="test2.jpg" IsHitTestVisible="False">
             <Image.Effect>
-                <e:ChromaticAberration />
+                <e:SharpenEffect />
             </Image.Effect>
         </Image>
     </Grid>

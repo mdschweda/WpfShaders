@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
+using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
@@ -28,10 +31,6 @@ namespace WpfShaderEffects {
         }
 
         #endregion
-
-        private static bool OnValidateGamma(object value) {
-            return value is double && (double) value >= 0;
-        }
 
         public GrayscaleEffect() {
             PixelShader = new PixelShader {

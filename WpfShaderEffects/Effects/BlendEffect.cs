@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
+using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
@@ -38,7 +41,7 @@ namespace WpfShaderEffects {
     }
 
     /// <summary>
-    /// A shader effect that mixes two textures.
+    /// A shader effect that mixes two textures
     /// </summary>
     public class BlendEffect : ShaderEffect {
 

@@ -1,6 +1,9 @@
+// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
 sampler2D input : register(s0);
 
-float delta : register(C0);
+float delta : register(c0);
 
 // RGB -> HSL
 float4 hsl(float4 c) {

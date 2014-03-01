@@ -1,6 +1,9 @@
-﻿sampler2D input : register(s0);
+﻿// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
 
-float gamma : register(C0);
+sampler2D input : register(s0);
+
+float gamma : register(c0);
 
 float4 main(float2 uv : TEXCOORD) : COLOR {
     float4 c = tex2D(input, uv);

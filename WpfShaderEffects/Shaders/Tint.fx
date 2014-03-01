@@ -1,6 +1,6 @@
 ﻿sampler2D input : register(s0);
 
-float4 color : register(C0);
+float4 color : register(c0);
 
 //  CIE 1931 luminance
 float luminance(float3 c) {

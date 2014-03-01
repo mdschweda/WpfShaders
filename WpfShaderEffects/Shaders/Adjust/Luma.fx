@@ -1,7 +1,10 @@
+// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
 sampler2D input : register(s0);
 
-float delta : register(C0);
-float3 lumacoeff : register(C1);
+float delta : register(c0);
+float3 lumacoeff : register(c1);
 
 // RGB -> Hue/Chroma/Luma
 float4 hcy(float4 c) {

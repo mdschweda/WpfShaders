@@ -1,4 +1,7 @@
-﻿sampler2D input : register(s0);
+﻿// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
+sampler2D input : register(s0);
 
 float threshold : register(c0);
 

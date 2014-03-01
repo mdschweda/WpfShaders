@@ -1,7 +1,10 @@
+// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
 sampler2D base : register(s0);
 sampler2D blend : register(s1);
 
-float amount : register(C0);
+float amount : register(c0);
 
 static const float3 lumarec601 = float3(0.299, 0.587, 0.114);
 static const float3 lumarec709 = float3(0.2126, 0.7152, 0.0722);
@@ -57,7 +60,6 @@ float4 main(float2 uv : TEXCOORD) : COLOR {
     hcyblend[1] = hcy(tex2D(blend, uv), lumarec601)[1];
     cblend = float4(rgb(hcyblend, lumarec601).rgb, cbase.a);
  
-    cbase.rgb *= 1 - amount;
-    cblend.rgb *= amount;
-    return saturate(cbase + cblend);
+    cbase.rgb = saturate(lerp(cbase.rgb, cblend.rgb, amount));
+    return cbase;
 }

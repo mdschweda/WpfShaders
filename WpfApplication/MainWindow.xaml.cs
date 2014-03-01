@@ -120,27 +120,21 @@ namespace WpfApplication {
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            // 51 153 ~17
-            //double[] color = new double[] { 0.2, 0.6, 0.0667, 1 };
-            double[] color = new double[] { 230 / 255.0, 230 / 255.0, 230 / 255.0, 1 };
-                /*
-                 * rgb = [179, 64, 156]
-                 * rgb = [15, 70, 26]
-                 * rgb = [23, 248, 125]
-                 */
-                double[] hcycolor = hcy(color, lumarec601);
-                double[] convBack = rgb(hcycolor, lumarec601);
+            
+            
+            for (int y = -3; y <= 3; y++) {
+                for (int x = -3; x <= 3; x++) {
+                    System.Diagnostics.Debug.Write(String.Format("{0:0.########}  ", gaussb(x, y, 0.84089642)));
+                    // 1.0 / (2.0 * pi * sigma * sigma) kann rausgezogen werden normalize(n, sigma);
+                }
+                System.Diagnostics.Debug.WriteLine("");
+            }
+        }
 
-                System.Diagnostics.Debug.WriteLine("======================================================");
-                System.Diagnostics.Debug.WriteLine("rgb = [{0:#}, {1:#}, {2:#}]", color[0] * 255, color[1] * 255, color[2] * 255);
-                System.Diagnostics.Debug.WriteLine("-------------------------------------------------------");
-                System.Diagnostics.Debug.WriteLine("hcy(rgb) = [{0:#.##}, {1:#.##}, {2:#.##}]", hcycolor[0], hcycolor[1], hcycolor[2]);
-                System.Diagnostics.Debug.WriteLine("rgb(hcy) = [{0:#}, {1:#}, {2:#}]", convBack[0] * 255, convBack[1] * 255, convBack[2] * 255);
-
-            /*hcycolor[0] *= 60;
-            hcycolor[1] *= 100;
-            hcycolor[2] *= 100;*/
-            //double[] color2 = rgb(hcycolor, lumarec601);
+        private double gaussb(double x, double y, double sigma) {
+            float pi = 3.1415926536f;
+            return 1.0 / (2.0 * pi * sigma * sigma)
+                * Math.Exp(-(x * x + y * y) / (2.0 * sigma * sigma));
         }
 
     }

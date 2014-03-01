@@ -9,14 +9,14 @@ using System.Windows.Media.Effects;
 namespace WpfShaderEffects {
 
     /// <summary>
-    /// A shader effect that inverts the colors of a target texture
+    /// A shader effect for accentuating edges in a target texture
     /// </summary>
-    public class InvertEffect : ShaderEffect {
+    public class EdgeDetectionEffect : ShaderEffect {
 
         #region Dependency Properties
 
         public static readonly DependencyProperty InputProperty =
-            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(InvertEffect), 0);
+            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(EdgeDetectionEffect), 0);
 
         /// <summary>
         /// Brush that acts as the input
@@ -32,10 +32,11 @@ namespace WpfShaderEffects {
 
         #endregion
 
-        public InvertEffect() {
+        public EdgeDetectionEffect() {
             PixelShader = new PixelShader {
-                UriSource = Global.MakePackUri("Shaders/Invert.ps")
+                UriSource = Global.MakePackUri("Shaders/EdgeDetection.ps")
             };
+            DdxUvDdyUvRegisterIndex = 0;
             UpdateShaderValue(InputProperty);
         }
 

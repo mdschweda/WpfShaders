@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
+using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
@@ -6,7 +9,7 @@ using System.Windows.Media.Effects;
 namespace WpfShaderEffects {
 
     /// <summary>
-    /// A shader effect that adjusts the lightness of a target texture.
+    /// A shader effect that adjusts the lightness of a target texture
     /// </summary>
     public class AdjustLightnessEffect : ShaderEffect {
 

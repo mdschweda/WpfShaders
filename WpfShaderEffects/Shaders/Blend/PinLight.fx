@@ -1,7 +1,10 @@
+// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
+
 sampler2D base : register(s0);
 sampler2D blend : register(s1);
 
-float amount : register(C0);
+float amount : register(c0);
 
 inline void pinlight(float baseCh, inout float blendCh) {
     if (baseCh < 2 * blendCh - 1)
@@ -19,7 +22,6 @@ float4 main(float2 uv : TEXCOORD) : COLOR {
     pinlight(cbase.b, cblend.b);
     pinlight(cbase.a, cblend.a);
 
-    cbase.rgb *= 1 - amount;
-    cblend.rgb *= amount;
-    return clamp(cbase + cblend, 0, 1);
+    cbase.rgb = saturate(lerp(cbase.rgb, cblend.rgb, amount));
+    return cbase;
 }

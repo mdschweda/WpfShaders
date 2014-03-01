@@ -121,6 +121,14 @@ Shifts the channels of a target texture, simulating achromatism.
 * **OffsetG**: Offset by which the green channel is shifted
 * **OffsetB**: Offset by which the blue channel is shifted
 
+## EdgeDetectionEffect
+
+Accentuates edges in a target texture.
+
+### Parameters
+
+* **Input**: Brush that acts as the input
+
 ## GammaCorrectionEffect
 
 Provides gamma correction.
@@ -146,6 +154,14 @@ Inverts the colors of a target texture.
 
 * **Input**: Brush that acts as the input
 
+## SharpenEffect
+
+Applies an unsharp mask on a target texture.
+
+### Parameters
+
+* **Input**: Brush that acts as the input
+
 ## SolarizeEffect
 
 Solarization of a target texture.
@@ -157,7 +173,7 @@ Solarization of a target texture.
 
 ## TintEffect
 
-Colorizes target texture.
+Colorizes a target texture.
 
 ### Parameters
 

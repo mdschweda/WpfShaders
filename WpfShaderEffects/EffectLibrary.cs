@@ -1,4 +1,5 @@
-﻿// GIT_COMMITTER_DATE
+﻿// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
 
 using System;
 using System.Windows;

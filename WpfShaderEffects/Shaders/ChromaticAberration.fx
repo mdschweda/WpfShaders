@@ -1,9 +1,12 @@
-﻿sampler2D input : register(s0);
+﻿// Copyright (c) 2014 Marcus Schweda
+// This file is licensed under the MIT license (see LICENSE)
 
-float2 shiftR : register(C0);
-float2 shiftG : register(C1);
-float2 shiftB : register(C2);
-float4 ddxDdy : register(C3);
+sampler2D input : register(s0);
+
+float2 shiftR : register(c0);
+float2 shiftG : register(c1);
+float2 shiftB : register(c2);
+float4 ddxDdy : register(c3);
 
 float4 main(float2 uv : TEXCOORD) : COLOR {
     float4 c = float4(0, 0, 0, 1);
