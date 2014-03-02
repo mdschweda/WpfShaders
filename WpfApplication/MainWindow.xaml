@@ -4,12 +4,12 @@
         xmlns:e="clr-namespace:WpfShaderEffects;assembly=WpfShaderEffects"
         Title="MainWindow" Height="575" Width="800">
     <Grid>
-        <Grid Name="visualSrc" Background="White">
+        <Grid Name="visualSrc" Background="Black">
             <TextBox Text="Test" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" />
         </Grid>
         <Image Source="test2.jpg" IsHitTestVisible="False">
             <Image.Effect>
-                <e:SharpenEffect />
+                <e:AdjustHueEffect />
             </Image.Effect>
         </Image>
     </Grid>
