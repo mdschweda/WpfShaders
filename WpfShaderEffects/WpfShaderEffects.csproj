@@ -65,6 +65,7 @@
     <Compile Include="Effects\AdjustHueEffect.cs" />
     <Compile Include="Effects\AdjustLightnessEffect.cs" />
     <Compile Include="Effects\ChromaticAberration.cs" />
+    <Compile Include="Effects\AdjustBrightnessContrastEffect.cs" />
     <Compile Include="Effects\GaussianBlurEffect.cs" />
     <Compile Include="Effects\EdgeDetectionEffect.cs" />
     <Compile Include="Effects\SharpenEffect.cs" />
@@ -204,6 +205,9 @@
   </ItemGroup>
   <ItemGroup>
     <Effect Include="Shaders\GaussianBlur.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="Shaders\Adjust\BrightnessContrast.fx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EffectCompile" Condition="'@(Effect)' != '' ">
