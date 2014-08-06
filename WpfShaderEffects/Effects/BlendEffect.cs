@@ -1,7 +1,6 @@
 ﻿// Copyright (c) 2014 Marcus Schweda
 // This file is licensed under the MIT license (see LICENSE)
 
-using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
@@ -201,7 +200,7 @@ namespace WpfShaderEffects {
         private static bool OnValidateAmount(object value) {
             if (value is double) {
                 double amount = (double)value;
-                return amount >= 0 && amount < 1.0;
+                return amount >= 0 && amount <= 1.0;
             }
             return false;
         }

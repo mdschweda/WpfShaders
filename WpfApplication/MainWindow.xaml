@@ -9,7 +9,11 @@
         </Grid>
         <Image Source="test2.jpg" IsHitTestVisible="False">
             <Image.Effect>
-                <e:AdjustHueEffect />
+                <e:BlendEffect Mode="Color" Amount="1.0" >
+                    <e:BlendEffect.Blend>
+                        <ImageBrush ImageSource="test.jpg" />
+                    </e:BlendEffect.Blend>
+                </e:BlendEffect>
             </Image.Effect>
         </Image>
     </Grid>
