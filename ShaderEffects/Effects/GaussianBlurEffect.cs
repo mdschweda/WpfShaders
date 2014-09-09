@@ -1,12 +1,11 @@
 ﻿// Copyright (c) 2014 Marcus Schweda
 // This file is licensed under the MIT license (see LICENSE)
 
-using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 
-namespace WpfShaderEffects {
+namespace MS.ShaderEffects {
 
     /// <summary>
     /// A shader effect that applies a Gaussian blur on a target texture

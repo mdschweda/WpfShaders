@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 
-namespace WpfShaderEffects {
+namespace MS.ShaderEffects {
 
     /// <summary>
     /// Blend modes for mixing colors

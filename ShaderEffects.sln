@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfShaderEffects", "WpfShaderEffects\WpfShaderEffects.csproj", "{EDB5E8A6-830C-4EA0-B309-C35019ABA183}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderEffects", "ShaderEffects\ShaderEffects.csproj", "{EDB5E8A6-830C-4EA0-B309-C35019ABA183}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication", "WpfApplication\WpfApplication.csproj", "{4B0E2016-9F97-444E-B68B-68289A89F751}"
 EndProject

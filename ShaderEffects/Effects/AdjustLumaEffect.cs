@@ -1,13 +1,12 @@
 ﻿// Copyright (c) 2014 Marcus Schweda
 // This file is licensed under the MIT license (see LICENSE)
 
-using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Media.Media3D;
 
-namespace WpfShaderEffects {
+namespace MS.ShaderEffects {
 
     /// <summary>
     /// A shader effect that adjusts the luma value of a target texture in the HCY' color space

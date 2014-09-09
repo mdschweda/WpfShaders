@@ -94,9 +94,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WpfShaderEffects\WpfShaderEffects.csproj">
+    <ProjectReference Include="..\ShaderEffects\ShaderEffects.csproj">
       <Project>{edb5e8a6-830c-4ea0-b309-c35019aba183}</Project>
-      <Name>WpfShaderEffects</Name>
+      <Name>ShaderEffects</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

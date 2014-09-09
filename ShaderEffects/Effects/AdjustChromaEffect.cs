@@ -1,25 +1,24 @@
 ﻿// Copyright (c) 2014 Marcus Schweda
 // This file is licensed under the MIT license (see LICENSE)
 
-using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 
-namespace WpfShaderEffects {
+namespace MS.ShaderEffects {
 
     /// <summary>
-    /// A shader effect that adjusts the hue of a target texture
+    /// A shader effect that adjusts the chroma value of a target texture in the HCY' color space
     /// </summary>
-    public class AdjustHueEffect : ShaderEffect {
+    public class AdjustChromaEffect : ShaderEffect {
 
         #region Dependency Properties
 
         public static readonly DependencyProperty InputProperty =
-            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(AdjustHueEffect), 0);
+            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(AdjustChromaEffect), 0);
 
         public static readonly DependencyProperty DeltaProperty =
-            DependencyProperty.Register("Delta", typeof(double), typeof(AdjustHueEffect),
+            DependencyProperty.Register("Delta", typeof(double), typeof(AdjustChromaEffect),
                     new UIPropertyMetadata(0.5, PixelShaderConstantCallback(0)), OnValidateDelta);
 
         /// <summary>
@@ -35,7 +34,7 @@ namespace WpfShaderEffects {
         }
 
         /// <summary>
-        /// Hue change between -1.0 and 1.0
+        /// Chroma change between -1.0 and 1.0
         /// </summary>
         public double Delta {
             get {
@@ -56,9 +55,9 @@ namespace WpfShaderEffects {
             return false;
         }
 
-        public AdjustHueEffect() {
+        public AdjustChromaEffect() {
             PixelShader = new PixelShader {
-                UriSource = Global.MakePackUri("Shaders/Adjust/Hue.ps")
+                UriSource = Global.MakePackUri("Shaders/Adjust/Chroma.ps")
             };
             UpdateShaderValue(InputProperty);
             UpdateShaderValue(DeltaProperty);

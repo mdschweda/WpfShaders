@@ -1,25 +1,24 @@
 ﻿// Copyright (c) 2014 Marcus Schweda
 // This file is licensed under the MIT license (see LICENSE)
 
-using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 
-namespace WpfShaderEffects {
+namespace MS.ShaderEffects {
 
     /// <summary>
-    /// A shader effect that adjusts the chroma value of a target texture in the HCY' color space
+    /// A shader effect that adjusts the lightness of a target texture
     /// </summary>
-    public class AdjustChromaEffect : ShaderEffect {
+    public class AdjustLightnessEffect : ShaderEffect {
 
         #region Dependency Properties
 
         public static readonly DependencyProperty InputProperty =
-            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(AdjustChromaEffect), 0);
+            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(AdjustLightnessEffect), 0);
 
         public static readonly DependencyProperty DeltaProperty =
-            DependencyProperty.Register("Delta", typeof(double), typeof(AdjustChromaEffect),
+            DependencyProperty.Register("Delta", typeof(double), typeof(AdjustLightnessEffect),
                     new UIPropertyMetadata(0.5, PixelShaderConstantCallback(0)), OnValidateDelta);
 
         /// <summary>
@@ -35,7 +34,7 @@ namespace WpfShaderEffects {
         }
 
         /// <summary>
-        /// Chroma change between -1.0 and 1.0
+        /// Lightness change between -1.0 and 1.0
         /// </summary>
         public double Delta {
             get {
@@ -56,9 +55,9 @@ namespace WpfShaderEffects {
             return false;
         }
 
-        public AdjustChromaEffect() {
+        public AdjustLightnessEffect() {
             PixelShader = new PixelShader {
-                UriSource = Global.MakePackUri("Shaders/Adjust/Chroma.ps")
+                UriSource = Global.MakePackUri("Shaders/Adjust/Lightness.ps")
             };
             UpdateShaderValue(InputProperty);
             UpdateShaderValue(DeltaProperty);

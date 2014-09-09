@@ -2,16 +2,15 @@
 // This file is licensed under the MIT license (see LICENSE)
 
 using System;
-using System.Windows;
 using System.Reflection;
 
-namespace WpfShaderEffects {
+namespace MS.ShaderEffects {
 
     internal static class Global {
 
         private static string _assemblyShortName;
 
-        public static Uri MakePackUri(string relativeFile) {
+        internal static Uri MakePackUri(string relativeFile) {
             string uriString = "pack://application:,,,/" + AssemblyShortName + ";component/" + relativeFile;
             return new Uri(uriString);
         }

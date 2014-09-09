@@ -1,25 +1,24 @@
 ﻿// Copyright (c) 2014 Marcus Schweda
 // This file is licensed under the MIT license (see LICENSE)
 
-using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 
-namespace WpfShaderEffects {
+namespace MS.ShaderEffects {
 
     /// <summary>
-    /// A shader effect that adjusts the saturation of a target texture
+    /// A shader effect that adjusts the hue of a target texture
     /// </summary>
-    public class AdjustSaturationEffect : ShaderEffect {
+    public class AdjustHueEffect : ShaderEffect {
 
         #region Dependency Properties
 
         public static readonly DependencyProperty InputProperty =
-            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(AdjustSaturationEffect), 0);
+            ShaderEffect.RegisterPixelShaderSamplerProperty("Input", typeof(AdjustHueEffect), 0);
 
         public static readonly DependencyProperty DeltaProperty =
-            DependencyProperty.Register("Delta", typeof(double), typeof(AdjustSaturationEffect),
+            DependencyProperty.Register("Delta", typeof(double), typeof(AdjustHueEffect),
                     new UIPropertyMetadata(0.5, PixelShaderConstantCallback(0)), OnValidateDelta);
 
         /// <summary>
@@ -32,11 +31,10 @@ namespace WpfShaderEffects {
             set {
                 SetValue(InputProperty, value);
             }
-
         }
 
         /// <summary>
-        /// Saturation change between -1.0 and 1.0
+        /// Hue change between -1.0 and 1.0
         /// </summary>
         public double Delta {
             get {
@@ -57,9 +55,9 @@ namespace WpfShaderEffects {
             return false;
         }
 
-        public AdjustSaturationEffect() {
+        public AdjustHueEffect() {
             PixelShader = new PixelShader {
-                UriSource = Global.MakePackUri("Shaders/Adjust/Saturation.ps")
+                UriSource = Global.MakePackUri("Shaders/Adjust/Hue.ps")
             };
             UpdateShaderValue(InputProperty);
             UpdateShaderValue(DeltaProperty);
