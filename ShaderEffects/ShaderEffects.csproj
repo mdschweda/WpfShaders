@@ -9,7 +9,7 @@
     <ProjectGuid>{EDB5E8A6-830C-4EA0-B309-C35019ABA183}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ms.ShaderEffects</RootNamespace>
+    <RootNamespace>MDS.ShaderEffects</RootNamespace>
     <AssemblyName>ShaderEffects</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

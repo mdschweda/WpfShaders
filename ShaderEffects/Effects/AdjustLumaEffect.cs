@@ -6,7 +6,7 @@ using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Media.Media3D;
 
-namespace MS.ShaderEffects {
+namespace MDS.ShaderEffects {
 
     /// <summary>
     /// A shader effect that adjusts the luma value of a target texture in the HCY' color space

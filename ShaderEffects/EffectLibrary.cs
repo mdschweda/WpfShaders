@@ -4,7 +4,7 @@
 using System;
 using System.Reflection;
 
-namespace MS.ShaderEffects {
+namespace MDS.ShaderEffects {
 
     internal static class Global {
 

@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 
-namespace MS.ShaderEffects {
+namespace MDS.ShaderEffects {
 
     /// <summary>
     /// A shader effect that turns a target texture into a grayscale output
