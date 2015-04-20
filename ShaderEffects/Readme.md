@@ -6,8 +6,12 @@ The projects makes use of the Shader Effects BuildTask from [WPF Futures](https:
 Since some of the effects require pixel shader 3.0 ShaderBuildTask.dll needs to be replaced with a modified version.
 
 To do so install Shader Effects BuildTask and copy the provided version under \ShaderEffectLibrary\ to
-%WinDir%\assembly\GAC_32\ShaderBuildTask\%Version% as administrator. This allows you to compile .fx files under the
-[ps_3_0](http://msdn.microsoft.com/en-us/library/windows/desktop/bb219845%28v=vs.85%29.aspx) profile.
+%WinDir%\assembly\GAC_32\ShaderBuildTask\%Version% as administrator or use the
+[gacutil](https://msdn.microsoft.com/de-de/library/ex0ss12c%28v=vs.110%29.aspx). This allows you to
+compile .fx files under the [ps_3_0](http://msdn.microsoft.com/en-us/library/windows/desktop/bb219845%28v=vs.85%29.aspx)
+profile.
+
+You might also need to install the [DirectX End-User Runtimes](http://www.microsoft.com/en-us/download/details.aspx?id=8109)
 
 # Effects
 
